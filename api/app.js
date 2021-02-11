@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
 
 //Getting all the lists
 app.get('/lists', (req, res) => {
-  List.find({}).then((lists) => {
+  List.find().then((lists) => {
     res.send(lists);
   })
 });
@@ -63,9 +63,9 @@ app.get('/lists/:listId/tasks', (req, res) => {
 
 //Getting ONE task with stated id in corresp. list
 app.get('/lists/:listId/tasks/:taskId',(req,res)=>{
-  task.findOne({
+  Task.findOne({
     _listId: req.params.listId,
-    _taskId: req.params.taskId
+    _id: req.params.taskId
   }).then((task)=>{
     res.send(task);
   });
@@ -79,7 +79,7 @@ app.post('/lists/:listId/tasks', (req, res) => {
   });
   newTask.save().then((newTaskDoc) => {
     res.send(newTaskDoc);
-  })
+  });
 });
 
 //Updating task by id
