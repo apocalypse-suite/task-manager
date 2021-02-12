@@ -13,7 +13,7 @@ export class NewFolderComponent implements OnInit {
   constructor(private tasksService: TasksService, private router: Router) {
   }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
   createFolder(title: string): any {
