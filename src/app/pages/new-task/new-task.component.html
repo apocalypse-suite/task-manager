@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="title">Create new task</h1>
+  <div class="input-field">
+    <input #taskTitleInput class="input" type="text" placeholder="Enter your task name here">
+  </div>
+  <div class="btnContainer">
+    <button routerLink="/" class="button">Cancel</button>
+    <button (click)="createTask(taskTitleInput.value)" class="button">Create</button>
+  </div>
+</div>

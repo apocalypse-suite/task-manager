@@ -10,30 +10,22 @@
       </h1>
 
       <div class="folders-list">
-        <a class="list-item" href="#">
-          <p>List 1</p>
+        <a *ngFor="let list of lists" [routerLink]="['/lists',list._id]" routerLinkActive="is-active" class="list-item"
+           href="#">
+          <p>{{list.title}}</p>
         </a>
-        <a class="list-item" href="#">
-          <p>List 1</p>
-        </a>
-        <a class="list-item" href="#">
-          <p>List 1</p>
-        </a>
-        <button class="button" (click)="createNewList()">New folder</button>
+        <button class="button" routerLink="/new-folder">New folder</button>
 
       </div>
     </div>
 
     <div class="tasks tab">
       <h1 class="title">Tasks</h1>
-      <div class="task">
-        <p>My new task is here</p>
+      <div *ngFor="let task of tasks" class="task">
+        <p>{{task.title}}</p>
       </div>
-      <div class="task">
-        <p>My new task is here</p>
-      </div>
-      <div class="task complete">
-        <p>My new task is here</p>
+      <div class="addBtnContainer">
+        <button routerLink="./new-task" class="addBtn">Add</button>
       </div>
     </div>
   </div>

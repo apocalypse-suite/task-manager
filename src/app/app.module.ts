@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { TaskViewComponent } from './pages/task-view/task-view.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { NewFolderComponent } from './pages/new-folder/new-folder.component';
+import { NewTaskComponent } from './pages/new-task/new-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskViewComponent
+    TaskViewComponent,
+    NewFolderComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,

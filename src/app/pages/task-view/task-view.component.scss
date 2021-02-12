@@ -1,9 +1,9 @@
 .container {
-  width: 100vw;
-  height: 100vh;
+  //width: 100vw;
+  //height: 100vh;
   padding: 2% 0;
-  background-color: #4158D0;
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
+  //background-color: #4158D0;
+  //background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(90, 92, 106, 1) 0%, rgba(32, 45, 58, 1) 81.3%);
 
   .circle1 {
     width: 200px;
@@ -72,7 +72,7 @@
           font-family: 'Open Sans', sans-serif;
           font-size: 18px;
           color: white;
-          //padding: 10px 15px 10px 35px;
+          padding: 5px 10px;
           width: 100%;
           margin-bottom: 10px;
 
@@ -82,7 +82,8 @@
 
           &.is-active {
             background-color: rgba(167, 167, 167, 0.2);
-            color: #4158D0;
+            border-radius: 2px;
+            color: #bebebe;
           }
         }
 
@@ -119,21 +120,42 @@
         font-family: 'Open Sans', sans-serif;
         background: rgba(0, 0, 0, 0.20);
         color: #b8b8b8;
-       &:not(.complete) {
-         transition: box-shadow .2s ease, transform .2s ease;
-         cursor: pointer;
 
-         &:hover {
-           box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.20);
-         }
+        &:not(.complete) {
+          transition: box-shadow .2s ease, transform .2s ease;
+          cursor: pointer;
 
-         &:active {
-           transform: scale(0.98);
-         }
-       }
-        &.complete{
+          &:hover {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.20);
+          }
+
+          &:active {
+            transform: scale(0.98);
+          }
+        }
+
+        &.complete {
           text-decoration: line-through;
           opacity: 0.5;
+        }
+      }
+
+      .addBtnContainer {
+        position: absolute;
+        bottom: 40px;
+        right: 30px;
+
+        .addBtn {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          border: none;
+          background-color: rgba(238, 235, 235, 0.7);
+          cursor: pointer;
+          &:active {
+            background-color: rgba(26, 27, 31, 0.5);
+            color: white;
+          }
         }
       }
     }

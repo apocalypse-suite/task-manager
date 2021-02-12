@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="title">Create new folder</h1>
+  <div class="input-field">
+    <input #folderTitleInput class="input" type="text" placeholder="Enter your folder name here">
+  </div>
+  <div class="btnContainer">
+    <button routerLink="/" class="button">Cancel</button>
+    <button (click)="createFolder(folderTitleInput.value)" class="button">Create</button>
+  </div>
+</div>
