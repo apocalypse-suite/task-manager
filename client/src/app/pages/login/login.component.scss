@@ -1,0 +1,19 @@
+.container{
+  padding-top: 100px;
+  .login-form {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    .title{
+      color: #b8b8b8;
+      margin-bottom: 100px;
+    }
+    mat-form-field{
+      width: 80%;
+      input{
+        color: white;
+      }
+    }
+  }
+}
