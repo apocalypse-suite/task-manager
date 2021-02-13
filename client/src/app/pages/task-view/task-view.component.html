@@ -14,8 +14,7 @@
            href="#">
           <p>{{list.title}}</p>
         </a>
-        <button class="button" routerLink="/new-folder">New folder</button>
-
+        <button mat-raised-button color="primary" class="button" routerLink="/new-folder">New folder</button>
       </div>
     </div>
 
@@ -25,7 +24,9 @@
         <p>{{task.title}}</p>
       </div>
       <div class="addBtnContainer">
-        <button routerLink="./new-task" class="addBtn">Add</button>
+        <button routerLink="./new-task" mat-fab color="primary" class="addBtn">
+          <mat-icon>add</mat-icon>
+        </button>
       </div>
     </div>
   </div>
