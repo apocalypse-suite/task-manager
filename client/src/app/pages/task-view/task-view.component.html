@@ -19,14 +19,22 @@
     </div>
 
     <div class="tasks tab">
-      <h1 class="title">Tasks</h1>
-      <div *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{ 'completed': task.completed }" class="task">
-        <p>{{task.title}}</p>
+      <div *ngIf="tasks">
+        <h1 class="title">Tasks</h1>
+        <div *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{ 'completed': task.completed }" class="task">
+          <p>{{task.title}}</p>
+        </div>
+
+        <p *ngIf="tasks.length === 0" class="hint">Empty here! <br> Create new task...</p>
+
+        <div class="addBtnContainer">
+          <button routerLink="./new-task" mat-fab color="primary" class="addBtn">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
       </div>
-      <div class="addBtnContainer">
-        <button routerLink="./new-task" mat-fab color="primary" class="addBtn">
-          <mat-icon>add</mat-icon>
-        </button>
+      <div *ngIf="!tasks">
+        <h3 class="hint">Select folder from the sidebar</h3>
       </div>
     </div>
   </div>

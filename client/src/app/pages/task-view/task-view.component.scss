@@ -97,8 +97,19 @@
     .tasks {
       border-radius: 10px 0 0 10px;
       display: flex;
+      position: relative;
       flex-direction: column;
       flex-grow: 1;
+
+      .hint {
+        font-family: 'Open Sans', sans-serif;
+        color: rgba(184, 184, 184, 0.2);
+        text-align: center;
+position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
 
       .task {
         padding: 15px;
